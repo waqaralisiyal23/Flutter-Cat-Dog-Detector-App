@@ -22,8 +22,9 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   @override
-  void dispose() {
+  void dispose() async {
     super.dispose();
+    await Tflite.close();
   }
 
   Future<void> _captureImageFromCamera() async {
